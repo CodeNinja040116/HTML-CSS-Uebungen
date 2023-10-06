@@ -29,13 +29,18 @@ section {
   min-width: 10px;
   padding: 1rem 0;
   min-height: 300px;
+  background-color: yellow; /* nur zur Visualisierung der Box */
+  display: flex; /* die Spalten werden nebeneinander gestellt */
+  justify-content: center; /*Spalten werden auf der x-Achse angeordnet */
+  align-items: stretch; /* definiert die Position auf der y-Achse */
+  gap: 10px; /* erstellt eine Lücke zwischen den Spalten */
 }
 
 .col {
   min-width: 20px;
   min-height: 20px;
-  margin: 10px;
-  width: 20%;
+  text-align: center;
+  flex-grow: 1; /* alle Spalten dürfen den verfügbaren Raum einnehmen; 1 = 1 Teil */
 }
 
 .trolley-grey {
@@ -48,6 +53,7 @@ section {
 
 .middle-red {
   background: #de8f6e;
+  width: 50% /* gibt dieser Spalte die Hälfte des verfügbaren Raumes und reduziert die anderen Spalten proportional. Diese werden aber immer eine Mindestbreite von 20px behalten */
 }
 
 .black {
@@ -55,7 +61,7 @@ section {
 }
 
 .orange {
-  background: orange;
+  background: orange
 }
 
 .olive {

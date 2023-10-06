@@ -23,7 +23,7 @@ body {
 
 .card img {
   width: 100%;
-  display: block;
+  display: flex;
 }
 
 .card h2 {
@@ -31,6 +31,25 @@ body {
   padding: 5px;
 }
 
-.row {
-  display: block;
+/* Bei Bildschirmen größer als 1024px sollen die Mops-Karten nebeneinander angeordnet sein 
+Ab 768 px bis 1023px soll der Body rot sein */
+@media(min-width: 1024px) {
+
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1023px) {
+  body {
+    background: red;}
+}
+
+/* Die Überschriftengröße auf einem großen Bildschirm mit 1600px soll 48px und mittig sein */
+@media(min-width:1600px) {
+  .card h2 {
+    font-size: 48px;
+    text-align: center;
+  }
 }
